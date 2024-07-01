@@ -1,4 +1,4 @@
-# DHBW Mosbach LaTeX Template
+# DHBW Heilbronn LaTeX Template
 
 Generated from [DHBW Mosbach LaTeX Template](https://github.com/123niel/dhbw-mosbach-latex-template)
 
@@ -57,14 +57,14 @@ In der Datei document.tex müssen einige Angaben über die zu schreibende Arbeit
 | documentTitle       | Titel der Arbeit                                       |                                                                                                                                                                                                                      |
 | documentPeriod      | Dauer der Arbeit                                       |                                                                                                                                                                                                                      |
 | matriculationNumber | Matrikelnummer des Autors                              |                                                                                                                                                                                                                      |
-| locationUniversity  | Standort der DHBW                                      | Heidenheim                                                                                                                                                                                                           |
+| locationUniversity  | Standort der DHBW                                      | Heilbronn                                                                                                                                                                                                            |
 | department          | Fakultät der DHBW in der sich der Autor befindet       |                                                                                                                                                                                                                      |
 | course              | Kurs in dem sich der Autor befindet                    |                                                                                                                                                                                                                      |
 | degree              | Abschluss, welcher mit dieser Arbeit angestrebt wird   | Bachelor of Science (INF2014-MI - INF2016-MI) <br/> Bachelor of Engineering (INF2014-IA/IM - INF2016-IA/IM) <br/> Bachelor of Science  (INF2017-IM/MI/IA)                                                            |
 | lecture             | Vorlesung, für die die Arbeit geschrieben wurde        |                                                                                                                                                                                                                      |
 | showLecture         | Ob die Vorlesung auf dem Deckblatt gezeigt werden soll | true <br/> false                                                                                                                                                                                                     |
 | releaseDate         | Abgabedatum                                            |                                                                                                                                                                                                                      |
-| releaseLocation     | Abgabeort                                              | Heidenheim                                                                                                                                                                                                           |
+| releaseLocation     | Abgabeort                                              | Heilbronn                                                                                                                                                                                                            |
 | companyName         | Name des Unternehmens in dem der Autor angestellt ist  |                                                                                                                                                                                                                      |
 | companyLocation     | Firmensitz                                             |                                                                                                                                                                                                                      |
 | tutor               | Betrieblicher Betreuer der Arbeit                      |                                                                                                                                                                                                                      |
@@ -175,14 +175,3 @@ Die Archivdatei wurde zusammen mit der Online-Version dieser Ausarbeitung auf di
  \> \>  $\vdash$  \textbf{lang/}  \> $\Rightarrow$ \textit{Language files for \LaTeX~template}\\ %\llcorner
 \end{tabbing}
 ```
-
-## Contributors
-
-* Tobias Dreher
-* Yves Fischer
-* Michael Gruben
-* Markus Barthel
-* Prof. Dr. Rolf Assfalg
-* Stefan Schneider
-* Andreas Kießling
-* Sarah Willibald
