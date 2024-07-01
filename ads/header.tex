@@ -1,0 +1,183 @@
+%!TEX root =../main.tex
+
+% show warning for old LaTeX syntax
+\RequirePackage[l2tabu, orthodox]{nag}
+
+\documentclass[
+    pdftex,
+    oneside,
+    12pt,			    % fontsize
+    parskip=half,		    % Space (in lines) between paragraphs
+    headheight = 20pt,    % Header hight
+    headsepline,		    % Line after header
+    footheight = 16pt,	    % Footer height
+    footsepline,		    % Line before footer
+    abstract=true,		    % Abstract headline
+    DIV=calc,		    % Calculate print space
+    BCOR=8mm,		    % BCOR settings (Bindekorrektur)
+    headinclude=false,   % Exclude header from print space
+    footinclude=false,	    % Exclude footer from print space
+    listof=totoc,		    % Show List of Figures/Tables in Contents
+    toc=bibliography,	    % Show Bibliography in Contents
+    % appendixprefix = true
+]{scrreprt}	                     % Koma-Script report-class, long document: scrreprt, short document: scrbook
+
+\usepackage{xstring}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{pifont}
+
+\input{ads/commandDefs.tex}
+
+% Include main settings
+\input{settings/main}
+
+% Include document settings
+\input{settings/document}
+
+% Load language specific Strings
+\input{lang/\documentLanguage}
+
+% Load language specific babel package
+\iflang{de}{\usepackage[english, ngerman]{babel}}
+\iflang{en}{\usepackage[ngerman, english]{babel}}
+
+% Add comment feature
+\newcommand{\comment}[1]{\par {\bfseries \color{blue} #1 \par}}
+
+
+%%%%%%% Package Includes %%%%%%%
+\usepackage[margin=\margin, foot=1cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{makeidx}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{calc}
+\usepackage{wrapfig}
+\usepackage[perpage, hang, multiple, stable, bottom]{footmisc}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{\documentFont}
+\usepackage[%
+    pdftitle={\documentTitle},
+    pdfauthor={\documentAuthor},
+    pdfsubject={\documentType},
+    pdfcreator={pdflatex, LaTeX with KOMA-Script},
+    pdfpagemode=UseOutlines,       % Show Contents while opening
+    pdfdisplaydoctitle=true, 		% Show document title instead of file name
+    pdflang={\documentLanguage}, % Document language
+]{hyperref}
+\usepackage{bookmark}
+\usepackage[nonumberlist,toc,acronym,nopostdot]{glossaries}
+\usepackage{scrhack}
+\usepackage{tabularx}
+\usepackage{afterpage}
+
+% Appendix
+\usepackage[toc, page, title, titletoc, header]{appendix}
+\renewcommand{\appendixname}{\appendixPhrase}
+\renewcommand{\appendixtocname}{\appendixPhrase}
+\renewcommand{\appendixpagename}{\appendixPhrase}
+\renewcommand{\autodot}{}
+
+% Seperate Appendix TOC
+\DeclareNewTOC[%
+    owner=\jobname,
+    listname={\appendixtocPhrase},% title of the appendix ToC
+]{atoc}
+
+\makeatletter
+\newcommand*\appendixtoc{%
+    \renewcommand*{\ext@toc}{atoc}%
+    \scr@ifundefinedorrelax{hypersetup}{}{\hypersetup{bookmarkstype=atoc}}%
+    \listofatocs
+}
+\makeatother
+
+% Generate glossary
+\makeglossaries{}
+
+% Load colors
+\defineColors{}
+
+% Set Titel, Autor and Date
+\title{\documentTitle}
+\author{\documentAuthor}
+\date{\datum}
+
+
+% PDF link settings
+\hypersetup{%
+    colorlinks=true,
+    linkcolor=LinkColor,
+    citecolor=LinkColor,
+    filecolor=LinkColor,
+    menucolor=LinkColor,
+    urlcolor=LinkColor,
+    linktocpage=true,
+    bookmarksnumbered=true
+}
+
+% Captions fontsize
+\addtokomafont{caption}{\small}
+
+% Bibliographie settings
+\iflang{de}{%
+    \usepackage[
+        backend=biber,		% recommended. Alternative: bibtex
+        bibwarn=true,
+        bibencoding=utf8,	         % If.bib file is encoded with utf8, otherwise ascii
+        sortlocale=de_DE,
+        style=\quoteStyle,
+        maxnames=5,
+        minnames=4,
+        dashed=false
+    ]{biblatex}
+    \DefineBibliographyStrings{german}{andothers={et\addabbrvspace al\adddot}}
+}
+\iflang{en}{%
+    \usepackage[
+        backend=biber,		% recommended. Alternative: bibtex
+        bibwarn=true,
+        bibencoding=utf8,        % If.bib file is encoded with utf8, otherwise ascii
+        sortlocale=en_US,
+        style=\quoteStyle,
+        maxnames=5,
+        minnames=4,
+        dashed=false
+    ]{biblatex}
+}
+
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+% \bibliography{bibliographie.bib}
+\addbibresource{bibliographie.bib}
+
+% Hurenkinder und Schusterjungen verhindern
+% http://projekte.dante.de/DanteFAQ/Silbentrennung
+\clubpenalty = 10000 % schließt Schusterjungen aus (Seitenumbruch nach der ersten Zeile eines neuen Absatzes)
+\widowpenalty = 10000 % schließt Hurenkinder aus (die letzte Zeile eines Absatzes steht auf einer neuen Seite)
+\displaywidowpenalty=10000
+
+% Graphicspath
+\graphicspath{{images/}}
+
+% frequently used programing languages
+\lstloadlanguages{PHP,Python,Java,C,C++,bash}
+
+\listingsettings{}
+% Rename Listings
+\renewcommand\lstlistingname{\listingPhrase}
+\renewcommand\lstlistlistingname{\listListingPhrase}
+\def\lstlistingautorefname{\authorListingPhrase}
+
+% Spaces in tables
+\setlength{\tabcolsep}{\tableColumnMargin}
+\renewcommand{\arraystretch}{\tableRowMargin}

@@ -1,0 +1,52 @@
+%!TEX root = ../main.tex
+
+\begin{titlepage}
+
+    \includegraphics[height=2.5cm]{images/cover/logo-dhbw.pdf}
+    \IfStrEq{\showCompanyLogo}{true}{
+        \hfill
+        \includegraphics[height=2.5cm]{images/cover/logo-company.png}
+    }
+    
+    \enlargethispage{20mm}
+    \begin{center}
+        \doublespacing{
+            \vspace*{12mm}
+            {\LARGE\textbf\documentTitle}
+        }\\
+        \vspace*{12mm}
+        {\large\textbf\documentTypePhrase}\\
+
+        % degre only for bachelor thesis
+        \ifDocType{T3300}{
+            \vspace*{12mm}
+            \degreePhrase\\
+            \vspace*{3mm}
+            {\textbf\degree}\\
+        }
+
+        \IfStrEq{\showLecture}{true}{
+            \vspace*{12mm}
+            \lecturePhrase\\
+            \vspace*{0mm}
+            {\textbf\lecture}\\
+        }
+
+        \vspace*{12mm}\departmentPhrase\\
+        \vspace*{0mm}\locationUniversityPhrase\locationUniversity\\
+        \vspace*{12mm}\documentAuthorPhrase\\
+        \vspace*{3mm}
+        {\large\textbf\documentAuthor}\\
+        \vspace*{12mm}\releaseDate\\
+        \vfill
+        \begin{spacing}{0.8}
+            \begin{tabularx}{\textwidth}{XX}
+                \textbf{\documentPeriodPhrase}                     & \documentPeriod                \\
+                \textbf{\matriculationNumberPhrase, \coursePhrase} & \matriculationNumber, \course  \\
+                \textbf{\companyPhrase}                            & \companyName, \companyLocation \\
+                \textbf{\tutorPhrase}                              & \tutor                         \\
+                \textbf{\evaluatorPhrase}                          & \evaluator
+            \end{tabularx}
+        \end{spacing}
+    \end{center}
+\end{titlepage}
