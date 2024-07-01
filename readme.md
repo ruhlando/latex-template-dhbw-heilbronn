@@ -1,6 +1,6 @@
 # DHBW Mosbach LaTeX Template
 
-Fork von [DHBW Heidenheim LaTeX Template](https://github.com/schnes4/dhbw-heidenheim-latex-template)
+Generated from [DHBW Mosbach LaTeX Template](https://github.com/123niel/dhbw-mosbach-latex-template)
 
 **Inhalt:**
 
