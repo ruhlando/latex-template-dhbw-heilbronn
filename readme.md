@@ -7,7 +7,6 @@ Generated from [DHBW Mosbach LaTeX Template](https://github.com/123niel/dhbw-mos
 * [Templatestruktur](#templatestruktur)
 * [Document Types](#document-types)
 * [Komponenten einer Wissenschaftlichen Arbeit](#komponenten-einer-wissenschaftlichen-arbeit)
-* [Contributors](#contributors)
 
 ## Templatestruktur
 
