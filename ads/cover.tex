@@ -17,7 +17,7 @@
         \vspace*{12mm}
         {\large\textbf\documentTypePhrase}\\
 
-        % degre only for bachelor thesis
+        % degree only for bachelor thesis
         \ifDocType{T3300}{
             \vspace*{12mm}
             \degreePhrase\\
@@ -32,8 +32,8 @@
             {\textbf\lecture}\\
         }
 
-        \vspace*{12mm}\departmentPhrase\\
-        \vspace*{0mm}\locationUniversityPhrase\locationUniversity\\
+        \vspace*{12mm}\departmentPhrase\ \department\\
+        \vspace*{0mm}\locationUniversityPhrase\ \locationUniversity\\
         \vspace*{12mm}\documentAuthorPhrase\\
         \vspace*{3mm}
         {\large\textbf\documentAuthor}\\
@@ -43,6 +43,7 @@
             \begin{tabularx}{\textwidth}{XX}
                 \textbf{\documentPeriodPhrase}                     & \documentPeriod                \\
                 \textbf{\matriculationNumberPhrase, \coursePhrase} & \matriculationNumber, \course  \\
+                \textbf{\dateOfBirthPhrase, \placeOfBirthPhrase}   & \dateOfBirth, \placeOfBirth    \\
                 \textbf{\companyPhrase}                            & \companyName, \companyLocation \\
                 \textbf{\tutorPhrase}                              & \tutor                         \\
                 \textbf{\evaluatorPhrase}                          & \evaluator
