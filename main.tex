@@ -34,10 +34,6 @@
     \newpage
 }%
 
-% Declaration
-\input{ads/declaration}
-\newpage
-
 % Abstract
 \input{content/abstract}
 \newpage
@@ -80,6 +76,10 @@
 
 \end{spacing}
 
+% Save the current Roman page number
+\newcounter{romanPageNumber}
+\setcounter{romanPageNumber}{\value{page}}
+
 \pagenumbering{arabic}
 
 \pagestyle{headings}
@@ -90,8 +90,11 @@
 
 \clearpage
 
-% Bibilography
+%Continue with Roman page number
+\pagenumbering{Roman}
+\setcounter{page}{\value{romanPageNumber}}
 
+% Bibilography
 \cleardoublepage
 \begin{spacing}{1.175}
     \printbibliography
@@ -105,13 +108,21 @@
 % Appendix
 \clearpage
 
+
 \begin{appendices}
     % \chapter{Test}
-
-
     \appendixtoc
     % \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+    \clearpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
     \input{content/appendix}
     % \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 \end{appendices}
+
+% Declaration
+\clearpage
+\input{ads/declaration}
+\newpage
+
 \end{document}
