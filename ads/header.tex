@@ -6,21 +6,21 @@
 \documentclass[
     pdftex,
     oneside,
-    12pt,			    % fontsize
+    12pt,			        % fontsize
     parskip=half,		    % Space (in lines) between paragraphs
-    headheight = 20pt,    % Header hight
+    headheight = 20pt,      % Header hight
     headsepline,		    % Line after header
     footheight = 16pt,	    % Footer height
     footsepline,		    % Line before footer
     abstract=true,		    % Abstract headline
-    DIV=calc,		    % Calculate print space
-    BCOR=8mm,		    % BCOR settings (Bindekorrektur)
-    headinclude=false,   % Exclude header from print space
+    DIV=calc,		        % Calculate print space
+    BCOR=8mm,		        % BCOR settings (Bindekorrektur)
+    headinclude=false,      % Exclude header from print space
     footinclude=false,	    % Exclude footer from print space
     listof=totoc,		    % Show List of Figures/Tables in Contents
     toc=bibliography,	    % Show Bibliography in Contents
     % appendixprefix = true
-]{scrreprt}	                     % Koma-Script report-class, long document: scrreprt, short document: scrbook
+]{scrreprt}	                % Koma-Script report-class, long document: scrreprt, short document: scrbook
 
 \usepackage{xstring}
 \usepackage[utf8]{inputenc}
@@ -70,9 +70,9 @@
     pdfauthor={\documentAuthor},
     pdfsubject={\documentType},
     pdfcreator={pdflatex, LaTeX with KOMA-Script},
-    pdfpagemode=UseOutlines,       % Show Contents while opening
+    pdfpagemode=UseOutlines,        % Show Contents while opening
     pdfdisplaydoctitle=true, 		% Show document title instead of file name
-    pdflang={\documentLanguage}, % Document language
+    pdflang={\documentLanguage},    % Document language
 ]{hyperref}
 \usepackage{bookmark}
 \usepackage[nonumberlist,toc,acronym,nopostdot]{glossaries}
@@ -131,9 +131,9 @@
 % Bibliographie settings
 \iflang{de}{%
     \usepackage[
-        backend=biber,		% recommended. Alternative: bibtex
+        backend=biber,		 % recommended. Alternative: bibtex
         bibwarn=true,
-        bibencoding=utf8,	         % If.bib file is encoded with utf8, otherwise ascii
+        bibencoding=utf8,	 % If.bib file is encoded with utf8, otherwise ascii
         sortlocale=de_DE,
         style=\quoteStyle,
         maxnames=5,
@@ -144,9 +144,9 @@
 }
 \iflang{en}{%
     \usepackage[
-        backend=biber,		% recommended. Alternative: bibtex
+        backend=biber,		 % recommended. Alternative: bibtex
         bibwarn=true,
-        bibencoding=utf8,        % If.bib file is encoded with utf8, otherwise ascii
+        bibencoding=utf8,    % If.bib file is encoded with utf8, otherwise ascii
         sortlocale=en_US,
         style=\quoteStyle,
         maxnames=5,
