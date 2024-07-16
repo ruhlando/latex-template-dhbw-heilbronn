@@ -1,176 +1,188 @@
 # DHBW Heilbronn LaTeX Template
 
-Generated from [DHBW Mosbach LaTeX Template](https://github.com/123niel/dhbw-mosbach-latex-template)
+## General Notes
+* The template is only a sample! Please adapt it to your needs as agreed with your academic supervisor. For example, adapt the citation style, page margins, etc.
+* Always use the latest version of this template.
+* The template is written for a thesis in English or German.
+* The template is written in pure LaTeX. It requires a basic knowledge of LaTeX.
 
-**Inhalt:**
-
-* [Templatestruktur](#templatestruktur)
-* [Document Types](#document-types)
-* [Komponenten einer Wissenschaftlichen Arbeit](#komponenten-einer-wissenschaftlichen-arbeit)
-
-## Templatestruktur
-
-Das Template ist im Wesentlichen in 6 Teile unterteilt:
+## Template Structure
+The template is basically divided into 6 parts:
 
 * main.tex
 * ads/
-* lang/
-* settings/
 * content/
 * images/
+* lang/
+* settings/
 
 ### main.tex
-
-main.tex ist die Kerndatei des Templates und damit auch die Datei, die kompiliert werden muss. Durch Importe anderer Dateien wird die Dokumentenstruktur beschrieben (kann bei Bedarf geändert werden wenn z.B. kein Sperrvermerk gewünscht wird).
+main.tex is the core file of the template and therefore also the file that must be compiled. 
+The document structure is described by importing other files (can be changed if required, e.g. if no restriction note is required).
 
 ### ads
+The ads folder contains the following predefined templates, which do not need to be customised (adjustments are made automatically):
 
-Im Ordner ads befinden sich folgende vordefinierte Vorlagen, welche nicht angepasst werden müssen (Anpassungen erfolgen automatisch):
+* commandDefs.tex
+* cover.tex
+* declaration.tex
+* header.tex
+* restrictionNotices.tex
 
-* Deckblatt
-* Eigenständigkeitserklärung
-* Sperrvermerk
-* LaTeX Document Header
+### content
+You can store all your written chapters in the content folder.
+
+### images
+You can save all images in the images folder.
 
 ### lang
-
-Im Ordner lang befinden sich alle notwendigen Übersetzungen.
+The lang folder contains all the necessary translations.
 
 ### settings
-
-Der Ordner settings beinhaltet zwei Dateien:
+The settings folder contains two files:
 
 * settings.tex
 * document.tex
 
-In der Datei settings.tex sind grundlegende Einstellungen vordefiniert, welche nicht geändert werden müssen.
+Basic settings are predefined in the settings.tex file. (e.g. quoteStyle, documentFont, ...)
+Some information about the document to be written must be entered in the document.tex file. (e.g. documentLanguage, documentType, locationUniversity, companyName, ...)
 
-In der Datei document.tex müssen einige Angaben über die zu schreibende Arbeit gemacht werden:
-
-| Variable            | Beschreibung                                           | Mögliche Werte                                                                                                                                                                                                       |
-| ------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| documentLanguage    | Sprache der Arbeit                                     | de<br/> en                                                                                                                                                                                                           |
-| documentType        | Art der Arbeit                                         | T2\\_1000 Projektarbeit (Semester 1 & 2) <br/> T2\\_2000 Projektarbeit (Semester 3 & 4) <br/> T2\\_3100 Studienarbeit (Semester 5) <br/> T2\\_3300 Bachelorarbeit <br/> Für andere Arbeiten den Typ direkt eintragen |
-| multipleAuthors     | Wurde die Arbeit von mehreren Autoren verfasst?        | true<br/> false                                                                                                                                                                                                      |
-| documentAuthor      | Autor der Arbeit                                       |                                                                                                                                                                                                                      |
-| documentTitle       | Titel der Arbeit                                       |                                                                                                                                                                                                                      |
-| documentPeriod      | Dauer der Arbeit                                       |                                                                                                                                                                                                                      |
-| matriculationNumber | Matrikelnummer des Autors                              |                                                                                                                                                                                                                      |
-| locationUniversity  | Standort der DHBW                                      | Heilbronn                                                                                                                                                                                                            |
-| department          | Fakultät der DHBW in der sich der Autor befindet       |                                                                                                                                                                                                                      |
-| course              | Kurs in dem sich der Autor befindet                    |                                                                                                                                                                                                                      |
-| degree              | Abschluss, welcher mit dieser Arbeit angestrebt wird   | Bachelor of Science (INF2014-MI - INF2016-MI) <br/> Bachelor of Engineering (INF2014-IA/IM - INF2016-IA/IM) <br/> Bachelor of Science  (INF2017-IM/MI/IA)                                                            |
-| lecture             | Vorlesung, für die die Arbeit geschrieben wurde        |                                                                                                                                                                                                                      |
-| showLecture         | Ob die Vorlesung auf dem Deckblatt gezeigt werden soll | true <br/> false                                                                                                                                                                                                     |
-| releaseDate         | Abgabedatum                                            |                                                                                                                                                                                                                      |
-| releaseLocation     | Abgabeort                                              | Heilbronn                                                                                                                                                                                                            |
-| companyName         | Name des Unternehmens in dem der Autor angestellt ist  |                                                                                                                                                                                                                      |
-| companyLocation     | Firmensitz                                             |                                                                                                                                                                                                                      |
-| tutor               | Betrieblicher Betreuer der Arbeit                      |                                                                                                                                                                                                                      |
-| evaluator           | Zweitkorrektor der Arbeit                              |                                                                                                                                                                                                                      |
-| linkColor           | Farbe von Verlinkungen                                 | 000000 (schwarz)                                                                                                                                                                                                     |
-
-### content
-
-### images
-
-# Document Types
-
-Das Template bietet die folgenden verschiedenen Document Types an:
+## Document Types
+The template offers the following different document types:
 
 * T2_1000 Project Thesis (Semester 1 & 2)
 * T2_2000 Project Thesis (Semester 3 & 4)
-* T2_3100 Seminar Paper (Semester 5 & 6)
+* T2_3100 Seminar Paper
 * T2_3300 Bachelor Thesis
-* Sonstige
+* Others
 
-Das Template passt alle relevanten Einstellungen automatisch an, sobald der Document Type geändert wird.
+The template automatically adjusts all relevant settings as soon as the document type is changed.
 
-## Document Type spezifische Besonderheiten
+* The seminar paper (T2_3100) is purely a university thesis. For this reason, the location of the company and the restriction notice are removed. It is also possible to submit the student research project as a   group. The variable multipleAuthors is available for this purpose. If this is set to true, the declaration of independence adapts itself from the I to the we form. Multiple authors only need to be entered in the documentAuthor variable, separated by commas.
+* For types other than the predefined types, the document type can be entered directly in the `documentType` field. Company information is then hidden.
 
-### T2_3100
+## How to install LaTeX
 
-Die Studienarbeit ist eine reine Hochschularbeit. Aus diesem Grund wird der Ort der Firma und der Sperrvermerk entfernt. Desweiteren ist es möglich die Studienarbeit als Gruppe abzugeben. Hierfür gibt es die Variable multipleAuthors. Ist diese auf true gesetzt, passt sich die Eigenständigkeitserklärungs selbst von der Ich- zur Wir-Form an. Mehrere Autoren sind lediglich mit Komma getrent in die Variable documentAuthor einzutragen.
+Here you will find links to help you with the installation:
+* [Official LaTeX  Website ](https://www.latex-project.org/get/)
+* [Getting Started Guide](https://guides.nyu.edu/LaTeX/installation)
 
-### Sonstige
+If you don't want to install LaTeX on your computer, you can use an online editor: [Overleaf](https://www.overleaf.com/)
 
-Für andere als die vordefinierten Types kann der Dokumenttyp direkt in das Feld `documentType` eingetragen werden (z.B. Hausarbeit). Unternehmensinformationen werden dann ausgeblendet.
+Useful website to learn the basics of latex: [Overleaf: Learn LaTeX](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
-# Komponenten einer Wissenschaftlichen Arbeit
+> [!TIP]
+> If you are already familiar with vscode you can use VS Code as a latex editor with the help of the [LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop) extension.
 
-## Abstract
+If you use LaTeX Workshop in VS Code, I recommend that you extend your settings.json file as follows to configure the extension:
+```json
+{
+    "latex-workshop.latex.tools": [
 
-An abstract is a brief summary of a research article, thesis, review, conference proceeding or any in-depth analysis of a particular subject or discipline, and is often used to help the reader quickly ascertain the paper's purpose. When used, an abstract always appears at the beginning of a manuscript, acting as the point-of-entry for any given scientific paper or patent application. Abstracting and indexing services for various academic disciplines are aimed at compiling a body of literature for that particular subject.
+        {
+         "name": "latexmk",
+         "command": "latexmk",
+         "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-pdf",
+          "-outdir=%OUTDIR%",
+          "%DOC%"
+         ],
 
-The terms précis or synopsis are used in some publications to refer to the same thing that other publications might call an ``abstract''. In``management'' reports, an executive summary usually contains more information (and often more sensitive information) than the abstract does.
+         "env": {}
 
-Quelle: <http://en.wikipedia.org/wiki/Abstract_(summary>)
+        },
 
-## Acronyms
+        {
+         "name": "xelatex",
+         "command": "xelatex",
+         "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "%DOC%"
+         ],
 
-Nur verwendete Akronyme werden letztlich im Abkürzungsverzeichnis des Dokuments angezeigt.
+         "env": {}
 
-Verwendung:  
+        },
 
-* `\ac{Abk.}`   --> fügt die Abkürzung ein, beim ersten Aufruf wird zusätzlich automatisch die ausgeschriebene Version davor eingefügt bzw. in einer Fußnote (hierfür muss in header.tex \usepackage[printonlyused,footnote]{acronym} stehen) dargestellt
-* `\acs{Abk.}`   -->  fügt die Abkürzung ein
-* `\acf{Abk.}`   --> fügt die Abkürzung UND die Erklärung ein
-* `\acl{Abk.}`   --> fügt nur die Erklärung ein
-* `\acp{Abk.}`  --> gibt Plural aus (angefügtes 's'); das zusätzliche 'p' funktioniert auch bei obigen Befehlen
+        {
+         "name": "pdflatex",
+         "command": "pdflatex",
+         "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "%DOC%"
+         ],
 
-Siehe auch: [http://golatex.de/wiki/\acronym](http://golatex.de/wiki/%5Cacronym)
+         "env": {}
 
-Beispiel:
+        },
 
-```LaTeX
-\acro{AGPL}{Affero GNU General Public License}
-\acro{WSN}{Wireless Sensor Network}
-```
+        {
+         "name": "biber",
+         "command": "biber",
+         "args": [
+          "%DOCFILE%"
+         ],
 
-## Appendix
+         "env": {}
 
-(Beispielhafter Anhang)
+        }
+       ],
 
-```LaTeX
-{\Large
-\begin{enumerate}[label=\Alph*.]
- \item Assignment 
- \item List of CD Contents
- \item CD 
-\end{enumerate}
+    "latex-workshop.latex.recipes": [
+        {
+         "name": "pdfLaTeX",
+         "tools": [
+          "pdflatex"
+         ]
+        },
+
+        {
+         "name": "latexmk",
+         "tools": [
+          "latexmk"
+         ]
+        },
+
+        {
+         "name": "xelatex",
+         "tools": [
+          "xelatex"
+         ]
+        },
+
+        {
+         "name": "pdflatex ➞ biber ➞ pdflatex ×2",
+         "tools": [
+          "pdflatex",
+          "biber",
+          "pdflatex",
+          "pdflatex"
+         ]
+        },
+
+        {
+        "name": "xelatex ➞ biber ➞ xelatex ×2",
+        "tools": [
+          "xelatex",
+          "biber",
+          "xelatex",
+          "xelatex"
+         ]
+        }
+
+    ],
+
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.wordWrap": "on"
+
 }
-\pagebreak
-%\includepdf[pages=-,scale=.9,pagecommand={}]{Aufgabenstellung.pdf} % PDF um 10% verkleinert einbinden --> Kopf- und Fußzeile  werden so korrekt dargestellt. Die Option `pages' ermöglicht es, eine bestimmte Sequenz von Seiten (z.B. 2-10 oder `-' für alle Seiten) auszuwählen.
-\pagebreak
-\section*{B. Auflistung der Begleitmaterial-Archivdatei }
-Die Archivdatei wurde zusammen mit der Online-Version dieser Ausarbeitung auf die Lernplattform hochgeladen.
-\begin{tabbing}
- mm \= mm \= mmmmmmmmmmmmmmmm \= \kill
- $\vdash$ \textbf{Literature/} \\ 
- | \> $\vdash$ \textbf{Citavi-Project(incl pdfs)/} \> \> $\Rightarrow$ \textit{Citavi (bibliography software) project with}\\
- | \> | \> \> \textit{almost all found sources relating to this report.} \\
- | \> | \> \> \textit{The PDFs linked to bibliography items therein} \\
- | \> | \> \> \textit{are in the sub-directory `CitaviFiles'}\\
- | \> | \>  -- bibliography.bib  \> $\Rightarrow$ \textit{Exported Bibliography file with all sources}\\
- | \> | \>  -- Studienarbeit.ctv4  \>  $\Rightarrow$ \textit{Citavi Project file}\\
- | \> | \>  $\vdash$ \textbf{CitaviCovers/} \>  $\Rightarrow$ \textit{Images of bibliography cover pages}\\
- | \> | \>  $\vdash$ \textbf{CitaviFiles/} \> $\Rightarrow$ \textit{Cited and most other found PDF resources}\\ %\llcorner
- | \> $\vdash$ \textbf{eBooks/} \\
- | \> $\vdash$ \textbf{JournalArticles/} \\
- | \> $\vdash$ \textbf{Standards/}\\
- | \> $\vdash$ \textbf{Websites/} \\ %\llcorner
- |\\
- $\vdash$ \textbf{Presentation/} \\
- | \>  --presentation.pptx\\
- | \>  --presentation.pdf\\
- |\\
- $\vdash$ \textbf{Report/} \\ %\llcorner
- \>  -- Aufgabenstellung.pdf\\
- \>  -- Studienarbeit2.pdf\\
- \>  $\vdash$ \textbf{Latex-Files/}   $\Rightarrow$ \textit{editable \LaTeX~files and other included files for this report}\\ %\llcorner
- \> \>  $\vdash$  \textbf{ads/}    \> $\Rightarrow$ \textit{Front- and Backmatter}\\
- \> \>  $\vdash$  \textbf{content/}  \> $\Rightarrow$ \textit{Main part}\\
- \> \>  $\vdash$  \textbf{images/}   \> $\Rightarrow$ \textit{All used images}\\
- \> \>  $\vdash$  \textbf{lang/}  \> $\Rightarrow$ \textit{Language files for \LaTeX~template}\\ %\llcorner
-\end{tabbing}
 ```
+
