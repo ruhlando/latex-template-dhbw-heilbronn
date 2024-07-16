@@ -145,8 +145,8 @@
         bibencoding=utf8,	 % If.bib file is encoded with utf8, otherwise ascii
         sortlocale=de_DE,
         style=\quoteStyle,
-        maxnames=5,
-        minnames=4,
+        maxnames=3,          % If there are up to three authors -> all are named
+        minnames=1,          % If there are four or more authors -> only the first author is named
         dashed=false
     ]{biblatex}
     \DefineBibliographyStrings{german}{andothers={et\addabbrvspace al\adddot}}
@@ -158,8 +158,8 @@
         bibencoding=utf8,    % If.bib file is encoded with utf8, otherwise ascii
         sortlocale=en_US,
         style=\quoteStyle,
-        maxnames=5,
-        minnames=4,
+        maxnames=3,          % If there are up to three authors -> all are named
+        minnames=1,          % If there are four or more authors -> only the first author is named
         dashed=false
     ]{biblatex}
 }
