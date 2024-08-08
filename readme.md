@@ -34,7 +34,7 @@ You can store all your written chapters in the /content/chapter folder.
 The following files can also be found here:
 * abstract.tex
 * appendix.tex
-* glossary.tex
+* glossary.tex (to create glossary/list of acronyms run the following command: `makeglossaries main.acn && makeglossaries main.glo`)
 
 ### images
 You can save all images in the images folder.
